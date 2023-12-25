@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookshelf Apps</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav class="flex justify-between items-center bg-indigo-500 p-5 text-center">
+    <h1 class="font-bold text-2xl text-white">Bookshelf App</h1>
+    <!-- <h5 class="font-semibold text-white">Total Buku : <span id="book-total" class="text-[2em]"></span></h5> -->
+    <form action="" id="search-book" class="shadow-md">
+      <input 
+        type="text" id="search-book" placeholder="Search book ..."
+        class="p-2"
+      >
+      <button type="submit" class="p-2 bg-violet-300">Search</button>
+    </form>
+  </nav>
+
+  <div class="flex flex-row justify-around items-start pt-10 px-10">
+    <div class="container max-w-[50%] h-fit bg-white p-5 shadow-md border-4 border-indigo-500" id="add-book">
+      <h2 class="container-header font-semibold text-2xl text-center text-indigo-500 capitalize">Input new book</h2>
+      <form class="form" action="#" id="add-book">
+        <div class="form-group form-title mb-2">
+          <label for="title" class="font-semibold text-indigo-500">Title</label>
+          <input 
+            type="text" id="title" name="title" required
+            class="bg-indigo-50 p-[16px] mb-[8px] text-[18px] border-2 border-indigo-500"
+          >
+        </div>
+        <div class="form-group form-title mb-2">
+          <label for="writer" class="font-semibold text-indigo-500">Author</label>
+          <input 
+            type="text" id="author" name="author" required
+            class="bg-indigo-50 p-[16px] mb-[8px] text-[18px] border-2 border-indigo-500"
+          >
+        </div>
+        <div class="form-group form-title mb-2">
+          <label for="date" class="font-semibold text-indigo-500">Year</label>
+          <input 
+            type="number" id="year" name="year" required
+            class="bg-indigo-50 p-[16px] mb-[8px] text-[18px] border-2 border-indigo-500"
+          >
+        </div>
+        <input 
+          type="submit" value="Add Book" name="submit"
+          class="btn-submit w-fit bg-indigo-50 hover:bg-indigo-500 py-[16px] px-[2.5em] mt-[15px] font-bold text-[18px] text-indigo-500 hover:text-white border-2 border-indigo-500"
+        >
+      </form>
+    </div>
+
+    <div class="w-[40%] h-[516px] overflow-scroll">
+      <div class="h-fit bg-white p-5 shadow-md border-4 border-indigo-500">
+        <h2 class="container-header font-bold text-xl text-indigo-500 capitalize">unfinished book :</h2>
+        <div class="list-item" id="unfinished-book">
+        </div>
+      </div>
+  
+      <div class="h-fit bg-white mt-5 p-5 shadow-md border-4 border-indigo-500">
+        <h2 class="container-header font-bold text-xl text-indigo-500 capitalize">finished reading :</h2>
+        <div class="list-item" id="finished-reading">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
